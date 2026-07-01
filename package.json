@@ -1,0 +1,12 @@
+{
+  "name": "cloudcommand-landing",
+  "version": "1.0.0",
+  "description": "Landing page de marketing de CloudCommand — plataforma de gestión digital para restaurantes.",
+  "scripts": {
+    "start": "serve ."
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "serve": "^14.2.5"
+  }
+}
