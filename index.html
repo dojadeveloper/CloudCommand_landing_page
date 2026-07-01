@@ -11,9 +11,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
@@ -22,7 +22,9 @@
     <!-- NAV -->
     <nav>
         <a href="#" class="nav-logo">
-            <span class="nav-logo-mark">C</span>
+            <span class="nav-logo-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h12v16l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5-2 1.5V2z"/><path d="M9 7h6M9 10h6M9 13h4"/></svg>
+            </span>
             CloudCommand
         </a>
         <ul class="nav-links" id="nav-links">
@@ -59,74 +61,122 @@
             </div>
         </div>
 
-        <div class="hero-mock">
-            <div class="hero-mock-bar">
-                <span class="hmb-dot"></span><span class="hmb-dot"></span><span class="hmb-dot"></span>
-            </div>
-            <div class="hero-mock-grid">
-                <div class="hmg-cell">
-                    <div class="hmg-label">Órdenes hoy</div>
-                    <div class="hmg-value">184</div>
+        <div class="hero-ticket-wrap">
+            <div>
+                <div class="ticket">
+                    <div class="ticket-head">
+                        <div class="ticket-brand">CLOUDCOMMAND</div>
+                        <div class="ticket-sub">Cocina Caliente · Estación C</div>
+                    </div>
+                    <hr class="ticket-dash">
+                    <div class="ticket-meta">
+                        <span>MESA 4 · ORD #184</span>
+                        <span>13:42</span>
+                    </div>
+                    <div class="ticket-items">
+                        <div class="ticket-item">
+                            <div class="ticket-item-name">
+                                <span>2× COM-015 Milanesa</span>
+                                <span class="ticket-item-code">sin cebolla</span>
+                            </div>
+                        </div>
+                        <div class="ticket-item">
+                            <div class="ticket-item-name">
+                                <span>1× COM-032 Wrap pollo</span>
+                                <span class="ticket-tag">PARA LLEVAR</span>
+                            </div>
+                        </div>
+                        <div class="ticket-item">
+                            <div class="ticket-item-name">
+                                <span>3× BEB-007 Limonada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="ticket-dash">
+                    <div class="ticket-total-row">
+                        <span>Total</span>
+                        <span>$312.00</span>
+                    </div>
+                    <div class="ticket-status">
+                        <span class="ticket-status-dot"></span>
+                        Impreso en 1.8s · Terminal 2
+                    </div>
                 </div>
-                <div class="hmg-cell">
-                    <div class="hmg-label">Ticket promedio</div>
-                    <div class="hmg-value acc">$312</div>
-                </div>
-                <div class="hmg-cell">
-                    <div class="hmg-label">Tiempo cocina</div>
-                    <div class="hmg-value">9 min</div>
-                </div>
-                <div class="hmg-cell">
-                    <div class="hmg-label">Terminales activas</div>
-                    <div class="hmg-value">3</div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">184</div>
+                        <div class="hero-stat-label">Órdenes hoy</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">9 min</div>
+                        <div class="hero-stat-label">Tiempo cocina</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">3</div>
+                        <div class="hero-stat-label">Terminales</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="logo-strip">Con la operación real de <strong>Deli's</strong> · Puebla, México</div>
+
     <!-- PROBLEMA -->
     <div class="section" id="problema">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
             <div class="eyebrow"><span class="eyebrow-dot"></span>El problema</div>
             <h2>Operar con papel te está costando dinero que no ves</h2>
             <p>Son errores pequeños que se acumulan todos los días: una comanda mal leída, un cambio de mesa que no se anota, un corte de caja que no cuadra.</p>
         </div>
 
-        <div class="pain-grid">
-            <div class="pain-card">
-                <div class="pain-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M7 4h10a2 2 0 0 1 2 2v14l-3-2-2 2-2-2-2 2-2-2-3 2V6a2 2 0 0 1 2-2z"/></svg>
-                </div>
-                <div>
-                    <h3>Errores por comandas en papel</h3>
-                    <p>Letra ilegible, papeles perdidos y mala coordinación entre cocina caliente y fría generan platillos equivocados y clientes molestos.</p>
-                </div>
-            </div>
-            <div class="pain-card">
-                <div class="pain-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-                </div>
-                <div>
-                    <h3>Cero trazabilidad financiera</h3>
-                    <p>Sin desglose por terminal de pago es imposible saber quién cobró qué, o detectar un faltante antes de que sea un problema mayor.</p>
+        <div class="pain-list">
+            <div class="pain-row" data-reveal>
+                <div class="pain-num">01</div>
+                <div class="pain-body">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M7 4h10a2 2 0 0 1 2 2v14l-3-2-2 2-2-2-2 2-2-2-3 2V6a2 2 0 0 1 2-2z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Errores por comandas en papel</h3>
+                        <p>Letra ilegible, papeles perdidos y mala coordinación entre cocina caliente y fría generan platillos equivocados y clientes molestos.</p>
+                    </div>
                 </div>
             </div>
-            <div class="pain-card">
-                <div class="pain-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>
-                </div>
-                <div>
-                    <h3>Decisiones sin datos</h3>
-                    <p>Sin reportes claros, no sabes qué platillo se vende más, en qué horario, ni dónde se te está yendo el dinero.</p>
+            <div class="pain-row" data-reveal>
+                <div class="pain-num">02</div>
+                <div class="pain-body">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                    </div>
+                    <div>
+                        <h3>Cero trazabilidad financiera</h3>
+                        <p>Sin desglose por terminal de pago es imposible saber quién cobró qué, o detectar un faltante antes de que sea un problema mayor.</p>
+                    </div>
                 </div>
             </div>
-            <div class="pain-card">
-                <div class="pain-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15z"/></svg>
+            <div class="pain-row" data-reveal>
+                <div class="pain-num">03</div>
+                <div class="pain-body">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>
+                    </div>
+                    <div>
+                        <h3>Decisiones sin datos</h3>
+                        <p>Sin reportes claros, no sabes qué platillo se vende más, en qué horario, ni dónde se te está yendo el dinero.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Carta desactualizada y cara</h3>
-                    <p>Reimprimir el menú cada vez que cambian precios o platillos es lento y costoso. Y mientras tanto, el cliente ve precios viejos.</p>
+            </div>
+            <div class="pain-row" data-reveal>
+                <div class="pain-num">04</div>
+                <div class="pain-body">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Carta desactualizada y cara</h3>
+                        <p>Reimprimir el menú cada vez que cambian precios o platillos es lento y costoso. Y mientras tanto, el cliente ve precios viejos.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,13 +185,13 @@
     <!-- CÓMO FUNCIONA -->
     <div class="section-alt" id="como-funciona">
         <div class="section-alt-inner">
-            <div class="section-head center">
+            <div class="section-head center" data-reveal>
                 <div class="eyebrow" style="margin-left:auto;margin-right:auto;"><span class="eyebrow-dot"></span>Cómo funciona</div>
                 <h2>De la mesa a tu reporte de ventas, en un solo flujo</h2>
                 <p style="margin-left:auto;margin-right:auto;">Sin integraciones complicadas ni curva de aprendizaje. Así se ve un servicio completo con CloudCommand.</p>
             </div>
 
-            <div class="steps">
+            <div class="steps" data-reveal>
                 <div class="step-card">
                     <div class="step-num">1</div>
                     <h3>Menú QR</h3>
@@ -173,13 +223,13 @@
 
     <!-- PRICING -->
     <div class="section" id="planes">
-        <div class="section-head center">
+        <div class="section-head center" data-reveal>
             <div class="eyebrow" style="margin-left:auto;margin-right:auto;"><span class="eyebrow-dot"></span>Planes</div>
             <h2>Un plan para cada etapa de tu restaurante</h2>
             <p style="margin-left:auto;margin-right:auto;">Empieza con lo esencial y crece hacia automatización total. Sin contratos forzosos.</p>
         </div>
 
-        <div class="pricing-grid">
+        <div class="pricing-grid" data-reveal>
             <!-- BÁSICO -->
             <div class="plan-card">
                 <div class="plan-name">Básico</div>
@@ -235,7 +285,7 @@
 
     <!-- TESTIMONIAL -->
     <div class="section">
-        <div class="testimonial">
+        <div class="testimonial" data-reveal>
             <div>
                 <div class="testimonial-quote">"Dejamos de perder pedidos entre cocina y salón, y por primera vez sabemos exactamente qué se vende cada semana."</div>
                 <div class="testimonial-author">
@@ -252,7 +302,7 @@
 
     <!-- CONTACTO -->
     <div class="section" id="contacto">
-        <div class="cta-box">
+        <div class="cta-box" data-reveal>
             <h2>¿Listo para dejar el papel atrás?</h2>
             <p>Agenda una demo de 20 minutos. Te mostramos el sistema con tu propio menú y resolvemos tus dudas sin compromiso.</p>
             <a href="mailto:dojaque.developer@gmail.com?subject=Demo%20CloudCommand" class="btn-primary">
