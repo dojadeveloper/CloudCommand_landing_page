@@ -5,9 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Dirección visual: "el pase de cocina de noche". El fondo base es un
- * negro cálido (ink); las tarjetas y el ticket son de papel real (paper).
- * Un solo acento (ember) evita el efecto multi-color genérico.
+ * Dirección visual: morado y blanco. Fondo base blanco, texto en
+ * carbón (#1F1F1F); el acento primario es un morado profundo (#4B2C91)
+ * y el secundario un morado medio (#6B4D9A). El lavanda claro (#E5D6E7)
+ * se usa como tinte de superficies secundarias y líneas de papel.
  */
 @theme inline {
     --font-heading: var(--font-heading);
@@ -40,26 +41,26 @@
 }
 
 :root {
-    --background: #1b1a17;
-    --foreground: #f4efe2;
-    --card: #faf7ef;
-    --card-foreground: #201d18;
-    --paper-line: #ded6c1;
-    --popover: #faf7ef;
-    --popover-foreground: #201d18;
-    --primary: #e2481b;
-    --primary-foreground: #faf7ef;
-    --secondary: #26241f;
-    --secondary-foreground: #f4efe2;
-    --muted: #26241f;
-    --muted-foreground: #a39c8b;
-    --accent: #2d2a24;
-    --accent-foreground: #f4efe2;
-    --destructive: #c23a1a;
-    --success: #6f9469;
-    --border: rgba(244, 239, 226, 0.12);
-    --input: rgba(244, 239, 226, 0.16);
-    --ring: #e2481b;
+    --background: #ffffff;
+    --foreground: #1f1f1f;
+    --card: #ffffff;
+    --card-foreground: #1f1f1f;
+    --paper-line: #e5d6e7;
+    --popover: #ffffff;
+    --popover-foreground: #1f1f1f;
+    --primary: #4b2c91;
+    --primary-foreground: #ffffff;
+    --secondary: #e5d6e7;
+    --secondary-foreground: #4b2c91;
+    --muted: #e5d6e7;
+    --muted-foreground: #6b4d9a;
+    --accent: #e5d6e7;
+    --accent-foreground: #4b2c91;
+    --destructive: #d4351f;
+    --success: #1a9e6b;
+    --border: rgba(31, 31, 31, 0.12);
+    --input: rgba(31, 31, 31, 0.16);
+    --ring: #4b2c91;
     --radius: 0.5rem;
 }
 
