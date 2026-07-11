@@ -48,7 +48,7 @@ export function PainList() {
             <div className="font-mono text-sm font-bold text-muted-foreground">
               {String(i + 1).padStart(3, "0")}
             </div>
-            <div className="flex size-11 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:rotate-3 sm:col-start-2">
+            <div className="flex size-11 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-[5deg] group-hover:scale-110 sm:col-start-2">
               <pain.icon className="size-5" strokeWidth={1.8} />
             </div>
             <div className="col-span-2 sm:col-span-1 sm:col-start-3">

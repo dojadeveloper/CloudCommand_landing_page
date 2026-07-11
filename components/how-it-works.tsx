@@ -27,14 +27,14 @@ export function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={step.title}
-              className="min-w-[220px] shrink-0 translate-y-4 snap-start bg-card px-5 pt-6 pb-5 text-card-foreground opacity-0 shadow-lg shadow-black/20 transition-[opacity,transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-data-[state=visible]/reveal:translate-y-0 group-data-[state=visible]/reveal:opacity-100 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/15 lg:min-w-0"
+              className="group/step min-w-[220px] shrink-0 translate-y-4 snap-start bg-card px-5 pt-6 pb-5 text-card-foreground opacity-0 shadow-lg shadow-black/20 transition-[opacity,transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-data-[state=visible]/reveal:translate-y-0 group-data-[state=visible]/reveal:opacity-100 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20 lg:min-w-0"
               style={{
                 clipPath:
                   "polygon(0 0,100% 0,100% 100%,90% 94%,80% 100%,70% 94%,60% 100%,50% 94%,40% 100%,30% 94%,20% 100%,10% 94%,0 100%)",
                 transitionDelay: `${i * 90}ms`,
               }}
             >
-              <div className="font-mono text-xs font-bold text-primary">
+              <div className="inline-block font-mono text-xs font-bold text-primary transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/step:-translate-y-0.5 group-hover/step:scale-110">
                 {String(i + 1).padStart(2, "0")} /05
               </div>
               <h3 className="mt-3 font-heading text-base font-semibold">{step.title}</h3>

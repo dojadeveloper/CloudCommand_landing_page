@@ -132,10 +132,10 @@ export function Pricing() {
               )}
               <Card
                 className={cn(
-                  "h-full gap-0 border-0 px-1 pt-1 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1",
+                  "h-full gap-0 border-0 px-1 pt-1 transition-[transform,box-shadow,--tw-ring-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2",
                   plan.featured
                     ? "ring-2 ring-primary hover:shadow-2xl hover:shadow-primary/30"
-                    : "hover:shadow-xl hover:shadow-black/10"
+                    : "hover:shadow-xl hover:shadow-black/10 hover:ring-primary/40"
                 )}
               >
                 <CardContent className="flex grow flex-col pt-6">
