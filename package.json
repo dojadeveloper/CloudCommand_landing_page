@@ -1,7 +1,7 @@
 {
-  "name": "comandify-landing",
+  "name": "comandium-landing",
   "version": "1.0.0",
-  "description": "Landing page de marketing de Comandify — plataforma de gestión digital para restaurantes.",
+  "description": "Landing page de marketing de Comandium — plataforma de gestión digital para restaurantes.",
   "scripts": {
     "start": "serve ."
   },
