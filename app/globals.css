@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Dirección visual: "el pase de cocina de noche". El fondo base es un
+ * negro cálido (ink); las tarjetas y el ticket son de papel real (paper).
+ * Un solo acento (ember) evita el efecto multi-color genérico.
+ */
+@theme inline {
+    --font-heading: var(--font-heading);
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-success: var(--success);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-paper-line: var(--paper-line);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+    --background: #1b1a17;
+    --foreground: #f4efe2;
+    --card: #faf7ef;
+    --card-foreground: #201d18;
+    --paper-line: #ded6c1;
+    --popover: #faf7ef;
+    --popover-foreground: #201d18;
+    --primary: #e2481b;
+    --primary-foreground: #faf7ef;
+    --secondary: #26241f;
+    --secondary-foreground: #f4efe2;
+    --muted: #26241f;
+    --muted-foreground: #a39c8b;
+    --accent: #2d2a24;
+    --accent-foreground: #f4efe2;
+    --destructive: #c23a1a;
+    --success: #6f9469;
+    --border: rgba(244, 239, 226, 0.12);
+    --input: rgba(244, 239, 226, 0.16);
+    --ring: #e2481b;
+    --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
