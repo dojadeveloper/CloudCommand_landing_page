@@ -1,8 +1,10 @@
 import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Reveal } from "@/components/reveal"
 import { Ticket } from "@/components/ticket"
 import { CountUp } from "@/components/count-up"
+import { WHATSAPP_DEMO_URL } from "@/lib/whatsapp"
 
 const stats = [
   { to: 184, suffix: "", label: "Órdenes hoy" },
@@ -14,7 +16,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 pt-16 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-24">
-        <div>
+        <Reveal>
           <div className="mb-6 flex items-center gap-2 font-mono text-xs tracking-widest text-primary uppercase">
             <span className="h-px w-8 bg-primary" />
             Hecho para restaurantes mexicanos
@@ -30,9 +32,9 @@ export function Hero() {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <Button size="lg" className="h-11 px-6 text-[0.95rem]" asChild>
-              <a href="#contacto">
+              <a href={WHATSAPP_DEMO_URL} target="_blank" rel="noopener noreferrer">
                 Solicita una demo
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-4 transition-transform duration-300 group-hover/button:translate-x-1" />
               </a>
             </Button>
             <Button size="lg" variant="outline" className="h-11 px-6 text-[0.95rem]" asChild>
@@ -43,15 +45,21 @@ export function Hero() {
           <p className="mt-9 text-sm text-muted-foreground">
             <strong className="font-semibold text-foreground">Deli&apos;s</strong>, Puebla — primer restaurante operando con Comandium.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="relative flex justify-center lg:justify-end">
+        <Reveal
+          className="relative flex justify-center lg:justify-end"
+          style={{ transitionDelay: "150ms" }}
+        >
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,theme(colors.primary/18%),transparent_65%)]" />
           <div className="flex flex-col items-center gap-6 lg:mr-[-2rem]">
-            <Ticket className="rotate-2" />
+            <Ticket className="rotate-2 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:rotate-0" />
             <div className="flex gap-6">
               {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
+                <div
+                  key={stat.label}
+                  className="text-center transition-transform duration-300 hover:-translate-y-0.5"
+                >
                   <CountUp
                     to={stat.to}
                     suffix={stat.suffix}
@@ -64,7 +72,7 @@ export function Hero() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       <div className="border-t border-border">

@@ -8,6 +8,7 @@ import { SectionLabel } from "@/components/section-label"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
+import { WHATSAPP_DEMO_URL } from "@/lib/whatsapp"
 
 const MONTHS_FREE = 2
 
@@ -83,7 +84,7 @@ export function Pricing() {
             type="button"
             onClick={() => setBilling("monthly")}
             className={cn(
-              "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+              "rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ease-out",
               billing === "monthly"
                 ? "bg-primary text-primary-foreground"
                 : "text-muted-foreground hover:text-foreground"
@@ -131,10 +132,10 @@ export function Pricing() {
               )}
               <Card
                 className={cn(
-                  "h-full gap-0 border-0 px-1 pt-1 transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5",
+                  "h-full gap-0 border-0 px-1 pt-1 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1",
                   plan.featured
                     ? "ring-2 ring-primary hover:shadow-2xl hover:shadow-primary/30"
-                    : "hover:shadow-xl hover:shadow-black/20"
+                    : "hover:shadow-xl hover:shadow-black/10"
                 )}
               >
                 <CardContent className="flex grow flex-col pt-6">
@@ -181,7 +182,9 @@ export function Pricing() {
                         "border-card-foreground/20 bg-transparent text-card-foreground hover:bg-card-foreground/5"
                     )}
                   >
-                    <a href="#contacto">Solicita una demo</a>
+                    <a href={WHATSAPP_DEMO_URL} target="_blank" rel="noopener noreferrer">
+                      Solicita una demo
+                    </a>
                   </Button>
                 </CardFooter>
               </Card>

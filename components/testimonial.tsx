@@ -13,8 +13,8 @@ export function Testimonial() {
           &ldquo;Dejamos de perder pedidos entre cocina y salón, y por primera vez sabemos exactamente qué se vende cada semana.&rdquo;
         </p>
 
-        <div className="flex items-center gap-3">
-          <div className="flex size-11 items-center justify-center rounded-full bg-primary font-heading font-bold text-primary-foreground">
+        <div className="group flex items-center gap-3">
+          <div className="flex size-11 items-center justify-center rounded-full bg-primary font-heading font-bold text-primary-foreground transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110">
             D
           </div>
           <div>

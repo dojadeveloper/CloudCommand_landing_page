@@ -4,6 +4,7 @@ import * as React from "react"
 import { Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { WHATSAPP_DEMO_URL } from "@/lib/whatsapp"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -62,7 +63,7 @@ export function Nav() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="relative text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-[width] after:duration-300 after:ease-out hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -70,7 +71,9 @@ export function Nav() {
           ))}
           <li>
             <Button asChild>
-              <a href="#contacto">Solicita una demo</a>
+              <a href={WHATSAPP_DEMO_URL} target="_blank" rel="noopener noreferrer">
+                Solicita una demo
+              </a>
             </Button>
           </li>
         </ul>
@@ -91,7 +94,7 @@ export function Nav() {
                   <SheetClose asChild>
                     <a
                       href={link.href}
-                      className="block rounded-md px-2 py-3 text-base font-medium text-card-foreground/80 hover:bg-black/5 hover:text-card-foreground"
+                      className="block rounded-md px-2 py-3 text-base font-medium text-card-foreground/80 transition-colors duration-300 hover:bg-card-foreground/5 hover:text-card-foreground"
                     >
                       {link.label}
                     </a>
@@ -101,7 +104,9 @@ export function Nav() {
               <li className="pt-2">
                 <SheetClose asChild>
                   <Button asChild className="w-full">
-                    <a href="#contacto">Solicita una demo</a>
+                    <a href={WHATSAPP_DEMO_URL} target="_blank" rel="noopener noreferrer">
+                      Solicita una demo
+                    </a>
                   </Button>
                 </SheetClose>
               </li>
