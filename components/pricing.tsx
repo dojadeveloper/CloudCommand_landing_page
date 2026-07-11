@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Check } from "lucide-react"
+import { Building2, Check, ClipboardList, Rocket } from "lucide-react"
 
 import { Reveal } from "@/components/reveal"
 import { SectionLabel } from "@/components/section-label"
@@ -15,6 +15,7 @@ const MONTHS_FREE = 2
 const plans = [
   {
     name: "Básico",
+    icon: ClipboardList,
     monthly: 799.99,
     note: "El punto de partida para dejar el papel atrás",
     featured: false,
@@ -30,6 +31,7 @@ const plans = [
   },
   {
     name: "Pro",
+    icon: Rocket,
     monthly: 1699.99,
     note: "El más elegido: control financiero y de equipo",
     featured: true,
@@ -44,6 +46,7 @@ const plans = [
   },
   {
     name: "Premium",
+    icon: Building2,
     monthly: 3299.99,
     note: "Para cadenas y operaciones multi-sucursal",
     featured: false,
@@ -124,7 +127,7 @@ export function Pricing() {
           const period = billing === "monthly" ? "/mes" : "/año"
 
           return (
-            <div key={plan.name} className="relative">
+            <div key={plan.name} className="group relative">
               {plan.featured && (
                 <div className="absolute -top-3 left-6 z-10 rounded-sm bg-primary px-3 py-1 font-mono text-[0.65rem] font-bold tracking-wide whitespace-nowrap text-primary-foreground uppercase shadow-sm">
                   Recomendado
@@ -139,7 +142,10 @@ export function Pricing() {
                 )}
               >
                 <CardContent className="flex grow flex-col pt-6">
-                  <div className="font-heading text-base font-semibold">{plan.name}</div>
+                  <div className="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-[#6B4D9A] text-primary-foreground shadow-md shadow-primary/25 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-[5deg] group-hover:scale-110">
+                    <plan.icon className="size-6" strokeWidth={1.75} />
+                  </div>
+                  <div className="mt-4 font-heading text-base font-semibold">{plan.name}</div>
                   <div className="mt-2 font-heading text-3xl font-bold">
                     {currency.format(price)}
                     <span className="ml-1 text-sm font-medium text-card-foreground/60">
