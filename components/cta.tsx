@@ -9,7 +9,7 @@ export function Cta() {
     <section id="contacto" className="mx-auto max-w-6xl px-6 py-24">
       <Reveal
         as="div"
-        className="bg-primary px-8 py-16 text-center text-primary-foreground transition-[box-shadow] duration-500 hover:shadow-2xl hover:shadow-primary/30 sm:px-16"
+        className="bg-primary px-8 py-16 text-center text-primary-foreground transition-[box-shadow,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/30 sm:px-16"
       >
         <h2 className="font-heading text-[clamp(1.8rem,3vw,2.4rem)] font-bold">
           ¿Listo para dejar el papel atrás?
